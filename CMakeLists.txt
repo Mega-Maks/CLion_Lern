@@ -3,4 +3,4 @@ project(lern_1)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(lern_1 main.cpp test.cpp)
+add_executable(lern_1 main.cpp)

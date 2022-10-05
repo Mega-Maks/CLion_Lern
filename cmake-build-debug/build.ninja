@@ -55,12 +55,6 @@ build CMakeFiles/lern_1.dir/main.cpp.obj: CXX_COMPILER__lern_1_Debug C$:/Users/R
   OBJECT_DIR = CMakeFiles\lern_1.dir
   OBJECT_FILE_DIR = CMakeFiles\lern_1.dir
 
-build CMakeFiles/lern_1.dir/test.cpp.obj: CXX_COMPILER__lern_1_Debug C$:/Users/Ryzhk/CLionProjects/lern_1/test.cpp || cmake_object_order_depends_target_lern_1
-  DEP_FILE = CMakeFiles\lern_1.dir\test.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\lern_1.dir
-  OBJECT_FILE_DIR = CMakeFiles\lern_1.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lern_1
@@ -69,7 +63,7 @@ build CMakeFiles/lern_1.dir/test.cpp.obj: CXX_COMPILER__lern_1_Debug C$:/Users/R
 #############################################
 # Link the executable lern_1.exe
 
-build lern_1.exe: CXX_EXECUTABLE_LINKER__lern_1_Debug CMakeFiles/lern_1.dir/main.cpp.obj CMakeFiles/lern_1.dir/test.cpp.obj
+build lern_1.exe: CXX_EXECUTABLE_LINKER__lern_1_Debug CMakeFiles/lern_1.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lern_1.dir

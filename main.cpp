@@ -1,64 +1,54 @@
 #include <iostream>
-#include <cmath>
+#include <string>
 
 using namespace std;
 
-//----------------------------------------------------------------------------------------------------------------------
-float regeron(float a, float c){
-    return sqrtf(((c*c) - (a*a)));
-}
+class Ticket {
+public:
+    int int_number = 0, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0;
 
-int t1084(){
-    float len_square, len_rope;
-    float pi = 3.1415926535;
-
-    cin >> len_square >> len_rope;
-    if (len_rope <= len_square * 0.5){
-        cout << fixed;
-        cout.precision(3);
-        cout << (pi) * len_rope * len_rope;
-    } else if (len_rope >= (len_square * sqrt(2)) * 0.5) {
-        cout << fixed;
-        cout.precision(3);
-        cout << len_square * len_square;
-    } else {
-        float a = (len_square / 2);
-        float b = regeron(a, len_rope);
-        cout << fixed;
-        cout.precision(3);
-        cout << (a * b * 4.) + ((((pi * len_rope * len_rope) * (((pi / 2.) - 2 * (acosf(a / len_rope))) * (180 / pi))) / 360) * 4) << '\n';
+    void do_sex_with_numbers()
+    {
+        a = int_number / 100000;
+        b = (int_number / 10000) % 10;
+        c = (int_number / 1000) % 10;
+        d = (int_number / 100) % 10;
+        e = (int_number / 10) % 10;
+        f = int_number % 10;
     }
 
-    return 0;
-}
-//----------------------------------------------------------------------------------------------------------------------
-int t1409(){
-    int a, b;
-    cin >> a >> b;
-    cout << (b - 1) << ' ' << (a - 1);
-    return 0;
-}
-//----------------------------------------------------------------------------------------------------------------------
+    bool is_happy()
+    {
+        if (a + b + c == d + e + f)
+            return true;
+        else
+            return false;
+    }
 
-int t1885(){
-    float h, t, v, x;
-    cin >> h >> t >> v >> x;
-    cout << (t * v - h) / (v - x);// << h / (x + 1);
-}
+};
 
-//----------------------------------------------------------------------------------------------------------------------
+    int main()
+    {
+        bool happy = false;
+        Ticket vovas_ticket;
 
-int t_line_and_dot() {
-    float x1, y1, x2, y2, x3, y3;
-    cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
-}
+        cin >> vovas_ticket.int_number;
 
-//----------------------------------------------------------------------------------------------------------------------
+        vovas_ticket.int_number += 1;
+        vovas_ticket.do_sex_with_numbers();
+        if (vovas_ticket.is_happy())
+        {
+            cout << "Yes";
+            return 0;
+        }
 
-
-int main() {
-    t1885();
-    return 0;
-}
-
-//----------------------------------------------------------------------------------------------------------------------
+        vovas_ticket.int_number -= 2;
+        vovas_ticket.do_sex_with_numbers();
+        if (vovas_ticket.is_happy())
+        {
+            cout << "Yes";
+            return 0;
+        }
+        cout << "No";
+        return 0;
+    }
